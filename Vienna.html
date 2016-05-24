@@ -24,12 +24,22 @@
    </div>
    
    <div>
-   var c=document.getElementById("myCanvas")
-   var ctx=c.getContext("2d");
-   ctx.beginPath();
-   ctx.fillStyle = "#FF0000";
-   ctx.arc(100,75,50,0,2*Math.PI);
-   ctx.stroke();
+   <canvas id="myCanvas" width="578" height="200"></canvas>
+   <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      var radius = 70;
+
+      context.beginPath();
+      context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = 'green';
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = '#003300';
+      context.stroke();
+    </script>
    </div>
    
    
